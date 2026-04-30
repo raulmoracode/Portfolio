@@ -2,26 +2,21 @@ import type { ProjectCardProps } from "@/types/card";
 
 export const staticProjects: readonly ProjectCardProps[] = [
   {
-    title: "Pene",
-    description: "Portfolio minimalista con Next.js y shadcn/ui.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Tailwind",
-      "React",
-      "Node.js",
-    ],
-    demoUrl: "https://tu-demo.com",
-    repoUrl: "https://github.com/raulmoracode/tu-repo",
+    title: "Moracode Portfolio",
+    description:
+      "A personal portfolio with fast navigation, modular cards and a clean editorial layout.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "React", "Framer Motion"],
+    demoUrl: "https://raulmoracode.dev",
+    repoUrl: "https://github.com/raulmoracode/moracode-portfolio",
     status: "In Progress",
   },
   {
-    title: "pollk",
-    description: "Portfolio minimalista con Next.js y shadcn/ui.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "React", "Node.js"],
-    demoUrl: "https://tu-demo.com",
-    repoUrl: "https://github.com/raulmoracode/tu-repo",
+    title: "Notes & Links Hub",
+    description:
+      "A lightweight personal hub to collect links, notes and recurring resources in one place.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "React", "Supabase"],
+    demoUrl: "https://links.raulmoracode.dev",
+    repoUrl: "https://github.com/raulmoracode/notes-links-hub",
     status: "Archived",
   },
 ] as const;
