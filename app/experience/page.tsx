@@ -3,7 +3,7 @@ import ExperienceClient from "./client";
 import { MainLinks } from "@/const/config/pages";
 
 export const metadata: Metadata = {
-  title: MainLinks.Experience.href,
+  title: MainLinks.Experience.title,
   description: MainLinks.Experience.description,
 };
 

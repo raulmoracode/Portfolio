@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Check, Mail, X } from "lucide-react";
+import { Check, Mail, RotateCcw } from "lucide-react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "../ui/card";
 
 export default function ContactForm() {
   const maxLength = 200;
@@ -83,156 +84,158 @@ export default function ContactForm() {
   }
 
   return (
-    <>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        onReset={onReset}
-        noValidate
-        className="space-y-8 @container"
-      >
-        <FieldGroup className="grid grid-cols-12 gap-4">
-          <Controller
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <Field className={defaultStyle}>
-                <FieldLabel className="flex shrink-0">name</FieldLabel>
-                <div className="w-full">
-                  <div className="relative w-full">
-                    <Input
-                      key="text-input-1"
-                      aria-invalid={!!form.formState.errors.name}
-                      placeholder="Enter your name"
-                      type="text"
-                      id="text-input-1"
-                      required
-                      disabled={!!form.formState.isSubmitting}
-                      {...field}
-                    />
-                  </div>
-
-                  <FieldError>
-                    {form.formState.errors.secondname?.message}
-                  </FieldError>
-                </div>
-              </Field>
-            )}
-          />
-          <Controller
-            control={form.control}
-            name="secondname"
-            render={({ field }) => (
-              <Field className={defaultStyle}>
-                <FieldLabel className="flex shrink-0">last Name</FieldLabel>
-
-                <div className="w-full">
-                  <div className="relative w-full">
-                    <Input
-                      key="text-input-2"
-                      aria-invalid={!!form.formState.errors.secondname}
-                      placeholder="Enter your last name"
-                      type="text"
-                      id="text-input-2"
-                      required
-                      disabled={!!form.formState.isSubmitting}
-                      {...field}
-                    />
-                  </div>
-
-                  <FieldError>
-                    {form.formState.errors.secondname?.message}
-                  </FieldError>
-                </div>
-              </Field>
-            )}
-          />
-          <Controller
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <Field className={defaultStyle}>
-                <FieldLabel className="flex shrink-0">email</FieldLabel>
-
-                <div className="w-full">
-                  <div className="relative w-full">
-                    <Input
-                      aria-invalid={!!form.formState.errors.email}
-                      key="email-input-0"
-                      placeholder="Enter your email"
-                      type="email"
-                      id="email-input-0"
-                      required
-                      disabled={!!form.formState.isSubmitting}
-                      {...field}
-                    />
-                  </div>
-                  <FieldError>
-                    {form.formState.errors.email?.message}
-                  </FieldError>
-                </div>
-              </Field>
-            )}
-          />
-          <Controller
-            control={form.control}
-            name="textarea"
-            render={({ field }) => (
-              <Field className="col-span-12 col-start-auto flex self-end flex-col gap-2 space-y-0 items-start">
-                <div className="flex justify-between w-full">
-                  <div>
-                    <FieldLabel className="flex shrink-0">message</FieldLabel>
-                  </div>
-                  <div>
-                    <FieldLabel className="flex shrink-0 tabular-nums">
-                      {currentValue.length} / {remaining}
-                    </FieldLabel>
-                  </div>
-                </div>
-                <div className="w-full">
-                  <Textarea
-                    key="textarea-0"
-                    id="textarea-0"
-                    placeholder="Write your message here..."
-                    className="resize-none"
-                    maxLength={maxLength}
-                    minLength={1}
-                    disabled={!!form.formState.isSubmitting}
-                    required
-                    {...field}
-                  />
-                  <FieldError>
-                    {form.formState.errors.textarea?.message}
-                  </FieldError>{" "}
-                </div>
-              </Field>
-            )}
-          />
-        </FieldGroup>
-      </form>
-
-      <div className="flex justify-between gap-2 w-full">
-        <Button
-          className="flex-1 cursor-pointer"
-          variant="default"
-          disabled={!!form.formState.isSubmitting}
-          type="button"
-          onClick={() => onReset()}
+    <Card className="dark:bg-transparent b">
+      <CardContent>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          onReset={onReset}
+          noValidate
+          className="space-y-8 @container"
         >
-          <X />
-          Reset
-        </Button>
+          <FieldGroup className="grid grid-cols-12 gap-4">
+            <Controller
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <Field className={defaultStyle}>
+                  <FieldLabel className="flex shrink-0">name</FieldLabel>
+                  <div className="w-full">
+                    <div className="relative w-full">
+                      <Input
+                        key="text-input-1"
+                        aria-invalid={!!form.formState.errors.name}
+                        placeholder="Enter your name"
+                        type="text"
+                        id="text-input-1"
+                        required
+                        disabled={!!form.formState.isSubmitting}
+                        {...field}
+                      />
+                    </div>
 
-        <Button
-          className="flex-1 cursor-pointer"
-          variant="outline"
-          type="submit"
-          onClick={form.handleSubmit(onSubmit)}
-          disabled={!form.formState.isValid}
-        >
-          {form.formState.isSubmitting ? <Mail /> : <Check />}
-          Send
-        </Button>
-      </div>
-    </>
+                    <FieldError>
+                      {form.formState.errors.name?.message}
+                    </FieldError>
+                  </div>
+                </Field>
+              )}
+            />
+            <Controller
+              control={form.control}
+              name="secondname"
+              render={({ field }) => (
+                <Field className={defaultStyle}>
+                  <FieldLabel className="flex shrink-0">last Name</FieldLabel>
+
+                  <div className="w-full">
+                    <div className="relative w-full">
+                      <Input
+                        key="text-input-2"
+                        aria-invalid={!!form.formState.errors.secondname}
+                        placeholder="Enter your last name"
+                        type="text"
+                        id="text-input-2"
+                        required
+                        disabled={!!form.formState.isSubmitting}
+                        {...field}
+                      />
+                    </div>
+
+                    <FieldError>
+                      {form.formState.errors.secondname?.message}
+                    </FieldError>
+                  </div>
+                </Field>
+              )}
+            />
+            <Controller
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <Field className={defaultStyle}>
+                  <FieldLabel className="flex shrink-0">email</FieldLabel>
+
+                  <div className="w-full">
+                    <div className="relative w-full">
+                      <Input
+                        aria-invalid={!!form.formState.errors.email}
+                        key="email-input-0"
+                        placeholder="Enter your email"
+                        type="email"
+                        id="email-input-0"
+                        required
+                        disabled={!!form.formState.isSubmitting}
+                        {...field}
+                      />
+                    </div>
+                    <FieldError>
+                      {form.formState.errors.email?.message}
+                    </FieldError>
+                  </div>
+                </Field>
+              )}
+            />
+            <Controller
+              control={form.control}
+              name="textarea"
+              render={({ field }) => (
+                <Field className="col-span-12 col-start-auto flex self-end flex-col gap-2 space-y-0 items-start">
+                  <div className="flex justify-between w-full">
+                    <div>
+                      <FieldLabel className="flex shrink-0">message</FieldLabel>
+                    </div>
+                    <div>
+                      <FieldLabel className="flex shrink-0 tabular-nums">
+                        {currentValue.length} / {remaining}
+                      </FieldLabel>
+                    </div>
+                  </div>
+                  <div className="w-full">
+                    <Textarea
+                      key="textarea-0"
+                      id="textarea-0"
+                      placeholder="Write your message here..."
+                      className="resize-none"
+                      maxLength={maxLength}
+                      minLength={1}
+                      disabled={!!form.formState.isSubmitting}
+                      required
+                      {...field}
+                    />
+                    <FieldError>
+                      {form.formState.errors.textarea?.message}
+                    </FieldError>{" "}
+                  </div>
+                </Field>
+              )}
+            />
+          </FieldGroup>
+        </form>
+
+        <div className="flex justify-between gap-2 mt-4 w-full">
+          <Button
+            className="flex-1 cursor-pointer"
+            variant="default"
+            disabled={!!form.formState.isSubmitting}
+            type="button"
+            onClick={() => onReset()}
+          >
+            <RotateCcw />
+            Reset
+          </Button>
+
+          <Button
+            className="flex-1 cursor-pointer "
+            variant="outline"
+            type="submit"
+            onClick={form.handleSubmit(onSubmit)}
+            disabled={!form.formState.isValid}
+          >
+            {form.formState.isSubmitting ? <Mail /> : <Check />}
+            Send
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
   );
 }

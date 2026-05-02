@@ -21,7 +21,7 @@ export const Social = {
   },
   pinterest: {
     name: "Pinterest",
-    href: "https://www.pinterest.com/raulmoracode/",
+    href: "https://www.pinterest.com/raulmoracode",
   },
   instagram: {
     name: "Instagram",

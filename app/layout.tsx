@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "/",
-  description: "Welcome to my personal website!",
+  title: "Home",
+  description: "hi i'm raúl, a software development student.",
 };
 
 export const viewport: Viewport = {
@@ -36,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.className} ${geistMono.className} min-h-screen bg-white text-black dark:bg-black dark:text-white`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>
       </body>

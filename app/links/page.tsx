@@ -3,7 +3,7 @@ import LinkPage from "./client";
 import { MainLinks } from "@/const/config/pages";
 
 export const metadata: Metadata = {
-  title: MainLinks.Links.href,
+  title: MainLinks.Links.title,
   description: MainLinks.Links.description,
 };
 

@@ -3,7 +3,7 @@ import BlogClient from "./client";
 import { MainLinks } from "@/const/config/pages";
 
 export const metadata: Metadata = {
-  title: MainLinks.Blog.href,
+  title: MainLinks.Blog.title,
   description: MainLinks.Blog.description,
 };
 

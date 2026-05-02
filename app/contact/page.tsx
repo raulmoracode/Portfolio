@@ -3,7 +3,7 @@ import ContactClient from "./client";
 import { MainLinks } from "@/const/config/pages";
 
 export const metadata: Metadata = {
-  title: MainLinks.Contact.href,
+  title: MainLinks.Contact.title,
   description: MainLinks.Contact.description,
 };
 
