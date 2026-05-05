@@ -9,7 +9,7 @@ export const Social = {
   },
   linkedin: {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/raulmoracode/",
+    href: "https://www.linkedin.com/in/raúl-mora-350796349",
   },
   youtube: {
     name: "YouTube",

@@ -3,7 +3,6 @@ export const Redirects = {
     name: "GitHub",
     href: "/github",
   },
-
   tiktok: {
     name: "TikTok",
     href: "/tiktok",

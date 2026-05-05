@@ -2,21 +2,44 @@ import type { ProjectCardProps } from "@/types/card";
 
 export const staticProjects: readonly ProjectCardProps[] = [
   {
-    title: "Moracode Portfolio",
+    title: "Portfolio",
     description:
-      "A personal portfolio with fast navigation, modular cards and a clean editorial layout.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "React", "Framer Motion"],
-    demoUrl: "https://raulmoracode.dev",
-    repoUrl: "https://github.com/raulmoracode/moracode-portfolio",
+      "Personal portfolio of projects, skills, and experience in software development.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Resend", "Biome", "Shadcn/ui"],
+    demoUrl: "https://raulmoracode.com",
+    repoUrl: "https://github.com/raulmoracode/Portfolio",
+    status: "Finished",
+  },
+  {
+    title: "MonkeyFacer",
+    description:
+      "Real-time gesture and expression detection using MediaPipe Holistic.",
+    tags: [
+      "MediaPipe",
+      "TypeScript",
+      "WebGL",
+      "Computer Vision",
+      "Real-time Processing",
+      "React",
+      "Vite",
+    ],
+    demoUrl: "https://monkeyfacer.raulmoracode.com",
+    repoUrl: "https://github.com/raulmoracode/MonkeyFacer",
+    status: "Finished",
+  },
+  {
+    title: "DevDash",
+    description: " Google New tab, but for delopers.",
+    tags: ["react", "TypeScript", "Tailwind", "Axios", "ESLint", "Shadcn/ui"],
+    demoUrl: "https://devdash.raulmoracode.com",
+    repoUrl: "https://github.com/raulmoracode/DevDash",
     status: "In Progress",
   },
   {
-    title: "Notes & Links Hub",
-    description:
-      "A lightweight personal hub to collect links, notes and recurring resources in one place.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "React", "Supabase"],
-    demoUrl: "https://links.raulmoracode.dev",
-    repoUrl: "https://github.com/raulmoracode/notes-links-hub",
-    status: "Archived",
+    title: "Kiboar",
+    description: " Ultimate keyboard component library for Kicad.",
+    tags: ["Kicad", "PCB", "3D Modeling", "Open Source"],
+    repoUrl: "https://github.com/raulmoracode/Kiboar",
+    status: "Finished",
   },
 ] as const;
