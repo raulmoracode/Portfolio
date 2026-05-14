@@ -5,8 +5,8 @@ import { Calendar, ExternalLink, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ArticleCardProps } from "@/types/card";
 import { buttonStyle, colorScheme, iconSize } from "@/styles/styles";
-import { Badge } from "@/components/ui/badge";
 import CardBase from "./CardBase";
+import TagBadge from "../TagBadge";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {
@@ -69,22 +69,7 @@ export default function ArticleCard({
             {description}
           </p>
 
-          {tags && tags.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {tags.map((tag) => (
-                <Badge
-                  key={tag}
-                  className={cn(
-                    "text-xs px-2 py-1 rounded-md",
-                    colorScheme.background.badge,
-                    "text-zinc-800 dark:text-zinc-300",
-                  )}
-                >
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          )}
+          <TagBadge tags={tags} />
 
           <Link
             href={url}

@@ -7,7 +7,7 @@ export type ArticleCardProps = {
   url: string;
   author?: string;
   readingTime?: string;
-  tags?: string[];
+  tags?: readonly string[];
 };
 
 export type EventCardProps = {
@@ -37,7 +37,7 @@ export type CareerCardProps = {
   location?: string;
   description: string;
   highlights?: string[];
-  tags?: string[];
+  tags?: readonly string[];
   companyUrl?: string;
   current?: boolean;
 };

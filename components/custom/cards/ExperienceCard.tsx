@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { Calendar, ExternalLink, MapPin } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { buttonStyle, colorScheme, iconSize } from "@/styles/styles";
 import type { CareerCardProps } from "@/types/card";
 import CardBase from "./CardBase";
+import TagBadge from "../TagBadge";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {
@@ -91,23 +91,7 @@ export default function CareerCard({
             </ul>
           )}
 
-          {tags.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 pt-1">
-              {tags.slice(0, 10).map((tag) => (
-                <Badge
-                  key={tag}
-                  className={cn(
-                    "text-xs px-2 py-1 rounded-md",
-                    colorScheme.background.badge,
-                    "text-zinc-800 dark:text-zinc-300",
-                  )}
-                >
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          )}
-
+          <TagBadge tags={tags} />
           {companyUrl && (
             <Link
               href={companyUrl}

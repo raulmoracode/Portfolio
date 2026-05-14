@@ -16,7 +16,9 @@ export default function CardBase({
         </div>
       </CardHeader>
 
-      <CardContent className="break-words space-y-4">{cardContent}</CardContent>
+      <CardContent className="wrap-break-word space-y-4">
+        {cardContent}
+      </CardContent>
     </Card>
   );
 }

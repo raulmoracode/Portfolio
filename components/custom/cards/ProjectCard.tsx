@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { TbExternalLink } from "react-icons/tb";
 import { BsGithub } from "react-icons/bs";
-import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import type { ProjectCardProps } from "@/types/card";
 import { buttonStyle, colorScheme, iconSize } from "@/styles/styles";
 import { cn } from "@/lib/utils";
 import CardBase from "./CardBase";
+import TagBadge from "../TagBadge";
 
 const statusDot: Record<NonNullable<ProjectCardProps["status"]>, string> = {
   Finished: "bg-green-500",
@@ -46,22 +46,7 @@ export default function ProjectCard({
             {description}
           </p>
 
-          {tags.length > 0 && (
-            <div className="flex flex-wrap gap-1.5  min-h-[1.6rem]">
-              {tags.slice(0, 10).map((tag) => (
-                <Badge
-                  key={tag}
-                  className={cn(
-                    "text-xs px-2 py-1 rounded-md ",
-                    colorScheme.background.badge,
-                    "text-zinc-800 dark:text-zinc-300",
-                  )}
-                >
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          )}
+          <TagBadge tags={tags} />
 
           <div className="flex gap-3">
             {demoUrl && (
