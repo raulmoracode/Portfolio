@@ -60,7 +60,7 @@ export default function EventCard({
       }
       cardContent={
         <>
-          <p className={cn("text-sm line-clamp-3", colorScheme.text.primary)}>
+          <p className={cn("text-sm ", colorScheme.text.primary)}>
             {description}
           </p>
 

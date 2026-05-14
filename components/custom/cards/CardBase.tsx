@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import type { CardBaseProps } from "@/types/card";
@@ -16,7 +16,7 @@ export default function CardBase({
         </div>
       </CardHeader>
 
-      <CardContent className="space-y-4">{cardContent}</CardContent>
+      <CardContent className="break-words space-y-4">{cardContent}</CardContent>
     </Card>
   );
 }

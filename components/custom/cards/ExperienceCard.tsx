@@ -76,7 +76,7 @@ export default function CareerCard({
       }
       cardContent={
         <>
-          <p className={cn("line-clamp-3", colorScheme.text.primary)}>
+          <p className={cn("text-sm", colorScheme.text.primary)}>
             {description}
           </p>
 
