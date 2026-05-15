@@ -8,7 +8,7 @@ import Charger from "@/components/custom/RoutesPrefetch";
 
 export default function Home() {
   const links = [
-    ...SocialLinks.filter((link) => link.href !== MainLinks.Links.href),
+    ...SocialLinks.filter((link) => link.label !== MainLinks.Links.href),
   ].sort(
     (a, b) =>
       a.label.replace(/\W/g, "").length - b.label.replace(/\W/g, "").length,
@@ -32,7 +32,7 @@ export default function Home() {
                   className="text-zinc-500   hover:text-black dark:hover:text-white transition-colors w-fit"
                 >
                   <Label className="cursor-pointer text-xl leading-snug">
-                    {link.label}
+                    {link.href}
                   </Label>
                 </Link>
               ))}

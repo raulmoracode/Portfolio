@@ -14,7 +14,7 @@ export default function LinksClient() {
     ...SocialLinks,
   ].sort(
     (a, b) =>
-      a.label.replace(/\W/g, "").length - b.label.replace(/\W/g, "").length,
+      a.href.replace(/\W/g, "").length - b.href.replace(/\W/g, "").length,
   );
   return (
     <PageBase
@@ -27,7 +27,7 @@ export default function LinksClient() {
         <div className="mt-2  border-zinc-200 dark:border-zinc-800 flex flex-col space-y-2 font-mono">
           {links.map((link) => (
             <Link
-              key={`${link.href}-${link.label}`}
+              key={`${link.href}-${link.href}`}
               href={link.href}
               className="text-zinc-400 hover:text-black dark:hover:text-white transition-colors w-fit"
               target={link.href.startsWith("http") ? "_blank" : undefined}
@@ -35,7 +35,7 @@ export default function LinksClient() {
                 link.href.startsWith("http") ? "noopener noreferrer" : undefined
               }
             >
-              <Label className="cursor-pointer text-2xl">{link.label}</Label>
+              <Label className="cursor-pointer text-2xl">{link.href}</Label>
             </Link>
           ))}
         </div>

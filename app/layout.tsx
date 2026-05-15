@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { MainLinks } from "@/const/config/pages";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "hi i'm raúl, a software development student.",
+  description: "raulmoracode",
 };
 
 export const viewport: Viewport = {

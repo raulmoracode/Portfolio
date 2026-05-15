@@ -28,13 +28,21 @@ export const staticProjects: readonly ProjectCardProps[] = [
     status: "Finished",
   },
   {
-    title: "DevDash",
-    description: " Google New tab, but for delopers.",
-    tags: ["react", "TypeScript", "Tailwind", "Axios", "ESLint", "Shadcn/ui"],
-    demoUrl: "https://devdash.raulmoracode.com",
-    repoUrl: "https://github.com/raulmoracode/DevDash",
+    title: "DevTree",
+    description: "Self-Hosted Linktree, powered by GitHub Pages.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Linktree",
+      "Self-Hosted",
+      "GitHub Pages",
+    ],
+    demoUrl: "https://raulmoracode.github.io/DevTree/",
+    repoUrl: "https://github.com/raulmoracode/DevTree",
     status: "In Progress",
   },
+
   {
     title: "Kiboar",
     description: " Ultimate keyboard component library for Kicad.",
