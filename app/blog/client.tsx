@@ -1,7 +1,7 @@
 "use client ";
 
 import PageBase from "@/components/custom/Pagebase";
-import { MainLinks } from "@/const/config/pages";
+import { Info } from "@/const/page/info";
 import BlogCard from "@/components/custom/cards/BlogCard";
 import { articles } from "@/const/page/blogs";
 import ComingSoon from "@/components/custom/ComingSoon";
@@ -9,8 +9,8 @@ import ComingSoon from "@/components/custom/ComingSoon";
 export default function BlogClient() {
   return (
     <PageBase
-      title={MainLinks.Blog.title}
-      description={MainLinks.Blog.description}
+      title={Info.Blog.title}
+      description={Info.Blog.description}
       showThemeToggle={true}
     >
       {articles.length === 0 ? (

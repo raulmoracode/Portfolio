@@ -1,15 +1,15 @@
 "use client";
 
 import PageBase from "@/components/custom/Pagebase";
-import { MainLinks } from "@/const/config/pages";
+import { Info } from "@/const/page/info";
 import ProjectCard from "@/components/custom/cards/ProjectCard";
 import { staticProjects } from "@/const/page/projects";
 
 export default function ProjectsClient() {
   return (
     <PageBase
-      title={MainLinks.Projects.title}
-      description={MainLinks.Projects.description}
+      title={Info.Projects.title}
+      description={Info.Projects.description}
       showThemeToggle={true}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

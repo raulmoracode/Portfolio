@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import LinkPage from "./client";
-import { MainLinks } from "@/const/config/pages";
+import { Info } from "@/const/page/info";
 
 export const metadata: Metadata = {
-  title: MainLinks.Links.title,
-  description: MainLinks.Links.description,
+  title: Info.Links.title,
 };
 
 export default function LinksPage() {

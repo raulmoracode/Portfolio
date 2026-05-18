@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import EventsClient from "./client";
-import { MainLinks } from "@/const/config/pages";
+import { Info } from "@/const/page/info";
 
 export const metadata: Metadata = {
-  title: MainLinks.Events.title,
-  description: MainLinks.Events.description,
+  title: Info.Events.title,
 };
 
 export default function EventsPage() {

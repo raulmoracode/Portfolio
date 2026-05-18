@@ -1,7 +1,7 @@
 "use client";
 
 import PageBase from "@/components/custom/Pagebase";
-import { MainLinks } from "@/const/config/pages";
+import { Info } from "@/const/page/info";
 import ExperienceCard from "@/components/custom/cards/ExperienceCard";
 import { experiences } from "@/const/page/experiences";
 import ComingSoon from "@/components/custom/ComingSoon";
@@ -9,8 +9,8 @@ import ComingSoon from "@/components/custom/ComingSoon";
 export default function ExperienceClient() {
   return (
     <PageBase
-      title={MainLinks.Experience.title}
-      description={MainLinks.Experience.description}
+      title={Info.Experience.title}
+      description={Info.Experience.description}
       showThemeToggle={true}
     >
       {experiences.length === 0 ? (
@@ -19,7 +19,7 @@ export default function ExperienceClient() {
         <div className="space-y-4">
           {experiences.map((experience) => (
             <ExperienceCard
-              key={experience.role}
+              key={experience.company}
               role={experience.role}
               company={experience.company}
               startDate={experience.startDate}

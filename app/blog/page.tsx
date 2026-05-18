@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import BlogClient from "./client";
-import { MainLinks } from "@/const/config/pages";
+import { Info } from "@/const/page/info";
 
 export const metadata: Metadata = {
-  title: MainLinks.Blog.title,
-  description: MainLinks.Blog.description,
+  title: Info.Blog.title,
 };
 
 export default function BlogPage() {

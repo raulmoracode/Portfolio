@@ -2,7 +2,7 @@
 
 import { staticEvents } from "@/const/page/events";
 import PageBase from "@/components/custom/Pagebase";
-import { MainLinks } from "@/const/config/pages";
+import { Info } from "@/const/page/info";
 import EventCard from "@/components/custom/cards/EventCard";
 import ComingSoon from "@/components/custom/ComingSoon";
 
@@ -16,8 +16,8 @@ export default function EventsClient() {
 
   return (
     <PageBase
-      title={MainLinks.Events.title}
-      description={MainLinks.Events.description}
+      title={Info.Events.title}
+      description={Info.Events.description}
       showThemeToggle={true}
     >
       {upcomingEvents.length === 0 ? (

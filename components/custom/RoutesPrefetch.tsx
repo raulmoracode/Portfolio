@@ -2,14 +2,13 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { MainLinks } from "@/const/config/pages";
 
-const routes = [
-  "/experience",
-  "/projects",
-  "/contact",
-  "/blog",
-  "/events",
-  "/links",
+const Mlinks = [
+  ...Object.values(MainLinks).filter(
+    (link) =>
+      link.href !== MainLinks.Links.href && link.href !== MainLinks.Home.href,
+  ),
 ];
 
 export default function RoutesPrefetch() {
@@ -19,9 +18,7 @@ export default function RoutesPrefetch() {
     let cleanup: (() => void) | undefined;
 
     const prefetchRoutes = () => {
-      routes.forEach((route) => {
-        router.prefetch(route);
-      });
+      Mlinks.forEach((route) => router.prefetch(route.href));
     };
 
     if (typeof window !== "undefined" && "requestIdleCallback" in window) {

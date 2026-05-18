@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import ExperienceClient from "./client";
-import { MainLinks } from "@/const/config/pages";
+import { Info } from "@/const/page/info";
 
 export const metadata: Metadata = {
-  title: MainLinks.Experience.title,
-  description: MainLinks.Experience.description,
+  title: Info.Experience.title,
 };
 
 export default function ExperiencePage() {
