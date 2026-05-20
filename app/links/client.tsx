@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import PageBase from "@/components/custom/Pagebase";
 import { Info } from "@/const/page/info";
 import { Tlinks } from "@/const/config/pages";
+import { SocialLinks } from "@/const/config/pages";
 
 export default function LinksClient() {
   return (
@@ -19,9 +20,10 @@ export default function LinksClient() {
             key={`${link.href}-${link.href}`}
             href={link.href}
             className="text-zinc-400 hover:text-black dark:hover:text-white transition-colors w-fit"
-            target={link.href.startsWith("http") ? "_blank" : undefined}
-            rel={
-              link.href.startsWith("http") ? "noopener noreferrer" : undefined
+            target={
+              SocialLinks.some((item) => item.href === link.href)
+                ? "_blank"
+                : "_self"
             }
           >
             <Label className="cursor-pointer text-2xl">{link.href}</Label>

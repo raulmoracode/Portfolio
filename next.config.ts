@@ -45,6 +45,11 @@ const nextConfig: NextConfig = {
         destination: Social.medium.href,
         permanent: true,
       },
+      {
+        source: "/leetcode",
+        destination: Social.leetcode.href,
+        permanent: true,
+      },
     ];
   },
 };

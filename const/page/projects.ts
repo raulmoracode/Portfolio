@@ -46,7 +46,7 @@ export const staticProjects: readonly ProjectCardProps[] = [
   {
     title: "Kiboar",
     description: " Ultimate keyboard component library for Kicad.",
-    tags: ["Kicad", "PCB", "3D Modeling", "Open Source"],
+    tags: ["Kicad", "PCB", "3D Modeling", "Open Source", "Hardware Design"],
     repoUrl: "https://github.com/raulmoracode/Kiboar",
     status: "Finished",
   },

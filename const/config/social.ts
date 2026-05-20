@@ -31,4 +31,8 @@ export const Social = {
     name: "Medium",
     href: "https://raulmoracode.medium.com",
   },
+  leetcode: {
+    name: "LeetCode",
+    href: "https://leetcode.com/u/raulmoracode/",
+  },
 };

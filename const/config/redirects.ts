@@ -31,4 +31,8 @@ export const Redirects = {
     name: "Medium",
     href: "/medium",
   },
+  leetcode: {
+    name: "LeetCode",
+    href: "/leetcode",
+  },
 };
