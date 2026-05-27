@@ -32,11 +32,11 @@ export default function Home() {
           </div>
 
           <details className="w-fit group">
-            <summary className="cursor-pointer select-none text-zinc-500 hover:text-black dark:hover:text-white transition-colors font-mono text-sm">
+            <summary className="cursor-pointer select-none text-zinc-500 hover:text-black dark:hover:text-white transition-colors  text-sm">
               social ({SocialLinks.length})
             </summary>
 
-            <div className="mt-2 pl-3 border-l border-zinc-200 dark:border-zinc-800 flex flex-col space-y-2 font-mono">
+            <div className="mt-2 pl-3 border-l border-zinc-200 dark:border-zinc-800 flex flex-col space-y-2 ">
               {Slinks.map((link) => (
                 <Link
                   key={link.href}
