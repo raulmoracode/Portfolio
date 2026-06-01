@@ -50,4 +50,18 @@ export const staticProjects: readonly ProjectCardProps[] = [
     repoUrl: "https://github.com/raulmoracode/Kiboar",
     status: "Finished",
   },
+  {
+    title: "Bookmarks",
+    description: "A simple bookmark manager built with React and Tailwind CSS.",
+    tags: [
+      "React",
+      "Tailwind CSS",
+      "Bookmark Manager",
+      "Minimalist Design",
+      "Open Source",
+    ],
+    demoUrl: "https://bookmarks.raulmoracode.com",
+    repoUrl: "https://github.com/raulmoracode/Bookmarks",
+    status: "Finished",
+  },
 ] as const;

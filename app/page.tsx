@@ -22,7 +22,7 @@ export default function Home() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-zinc-500   hover:text-black dark:hover:text-white transition-colors w-fit"
+                className="text-zinc-500 font-medium font-mono cursor-pointer  hover:text-black dark:hover:text-white transition-colors w-fit"
               >
                 <Label className="cursor-pointer text-xl leading-snug">
                   {link.href}

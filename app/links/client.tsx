@@ -19,7 +19,7 @@ export default function LinksClient() {
           <Link
             key={`${link.href}-${link.href}`}
             href={link.href}
-            className="text-zinc-400  hover:text-black dark:hover:text-white transition-colors w-fit"
+            className="text-zinc-400 font-medium font-mono cursor-pointer text-2xl hover:text-black transition-colors w-fit"
             target={
               SocialLinks.some((item) => item.href === link.href)
                 ? "_blank"

@@ -19,8 +19,10 @@ export default function PageBase({
       {showThemeToggle && <ModeToggle />}
       <main className="flex w-full max-w-4xl flex-col md:pt-25 sm:pt-40 sm:pb-1 pt-20 px-8 flex-1">
         <section className="space-y-4 mb-6 sm:mb-10">
-          <h1 className="text-4xl font-bold tracking-tighter">{title}</h1>
-          <p className="max-w-150 leading-snug text-zinc-500 dark:text-zinc-400 text-lg ">
+          <h1 className="text-4xl  tracking-tighter font-mono font-bold">
+            {title}
+          </h1>
+          <p className="max-w-150 mb-4 font-mono  leading-snug text-zinc-500  text-lg ">
             {description}
           </p>
           {!isRootPath && (
