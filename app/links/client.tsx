@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
-import PageBase from "@/components/custom/Pagebase";
+import PageBase from "@/components/custom/PageBase";
 import { Info } from "@/const/page/info";
 import { Tlinks } from "@/const/config/pages";
 import { SocialLinks } from "@/const/config/pages";

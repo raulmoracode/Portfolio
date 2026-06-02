@@ -1,6 +1,6 @@
 "use client";
 
-import PageBase from "@/components/custom/Pagebase";
+import PageBase from "@/components/custom/PageBase";
 import { Info } from "@/const/page/info";
 import ContactForm from "@/components/custom/ContactForm";
 

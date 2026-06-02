@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
-import PageBase from "@/components/custom/Pagebase";
+import PageBase from "@/components/custom/PageBase";
 import { SocialLinks, Mlinks, Slinks } from "@/const/config/pages";
 import Charger from "@/components/custom/RoutesPrefetch";
 import { Info } from "@/const/page/info";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageBase from "@/components/custom/Pagebase";
+import PageBase from "@/components/custom/PageBase";
 import Link from "next/link";
 
 export const metadata: Metadata = {

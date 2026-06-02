@@ -1,7 +1,7 @@
 "use client";
 
 import { staticEvents } from "@/const/page/events";
-import PageBase from "@/components/custom/Pagebase";
+import PageBase from "@/components/custom/PageBase";
 import { Info } from "@/const/page/info";
 import EventCard from "@/components/custom/cards/EventCard";
 import ComingSoon from "@/components/custom/ComingSoon";

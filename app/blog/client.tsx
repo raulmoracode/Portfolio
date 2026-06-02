@@ -1,6 +1,6 @@
 "use client ";
 
-import PageBase from "@/components/custom/Pagebase";
+import PageBase from "@/components/custom/PageBase";
 import { Info } from "@/const/page/info";
 import BlogCard from "@/components/custom/cards/BlogCard";
 import { articles } from "@/const/page/blogs";
