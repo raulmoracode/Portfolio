@@ -1,4 +1,4 @@
-export const Redirects = {
+export const SocialRoutes = {
   github: {
     name: "GitHub",
     href: "/github",
@@ -27,12 +27,12 @@ export const Redirects = {
     name: "Instagram",
     href: "/instagram",
   },
-  medium: {
-    name: "Medium",
-    href: "/medium",
-  },
   leetcode: {
     name: "LeetCode",
     href: "/leetcode",
+  },
+  medium: {
+    name: "Medium",
+    href: "/medium",
   },
 };

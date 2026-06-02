@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { Social } from "./const/config/social";
+import { Social } from "./const/config/social-links";
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["192.168.1.43"],

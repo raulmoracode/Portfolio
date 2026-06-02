@@ -1,4 +1,4 @@
-export const Social = {
+export const SocialLinks = {
   github: {
     name: "GitHub",
     href: "https://github.com/raulmoracode",

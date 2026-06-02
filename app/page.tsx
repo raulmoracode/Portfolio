@@ -3,7 +3,11 @@
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
 import PageBase from "@/components/custom/PageBase";
-import { SocialLinks, Mlinks, Slinks } from "@/const/config/pages";
+import {
+  SocialRoutesConverter,
+  SortedMainItems,
+  SortedSocialItems,
+} from "@/const/config/navigation";
 import Charger from "@/components/custom/RoutesPrefetch";
 import { Info } from "@/const/page/info";
 
@@ -18,7 +22,7 @@ export default function Home() {
       >
         <nav className="flex flex-col space-y-8">
           <div className="flex flex-col space-y-1 mb-10 ">
-            {Mlinks.map((link) => (
+            {SortedMainItems.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -32,12 +36,12 @@ export default function Home() {
           </div>
 
           <details className="w-fit group">
-            <summary className="cursor-pointer select-none text-zinc-500 hover:text-black dark:hover:text-white transition-colors  text-sm">
-              social ({SocialLinks.length})
+            <summary className="cursor-pointer select-none text-zinc-500 hover:text-black dark:hover:text-white transition-colors  font-mono font-medium">
+              social ({SocialRoutesConverter.length})
             </summary>
 
             <div className="mt-2 pl-3 border-l border-zinc-200 dark:border-zinc-800 flex flex-col space-y-2 ">
-              {Slinks.map((link) => (
+              {SortedSocialItems.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -45,7 +49,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-zinc-500 hover:text-black dark:hover:text-white transition-colors w-fit"
                 >
-                  <Label className="cursor-pointer text-sm leading-snug">
+                  <Label className="cursor-pointer font-mono leading-snug">
                     {link.label}
                   </Label>
                 </Link>
