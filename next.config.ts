@@ -1,53 +1,53 @@
 import type { NextConfig } from "next";
-import { Social } from "./const/config/social-links";
+import { SocialLinks } from "./const/config/social-links";
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["192.168.1.43"],
   async redirects() {
     return [
       {
-        source: "/youtube",
-        destination: Social.youtube.href || "/",
+        source: SocialLinks.youtube.href,
+        destination: SocialLinks.youtube.href || "/",
         permanent: true,
       },
       {
-        source: "/github",
-        destination: Social.github.href || "/",
+        source: SocialLinks.github.href,
+        destination: SocialLinks.github.href || "/",
         permanent: true,
       },
       {
-        source: "/linkedin",
-        destination: Social.linkedin.href || "/",
+        source: SocialLinks.linkedin.href,
+        destination: SocialLinks.linkedin.href || "/",
         permanent: true,
       },
       {
-        source: "/twitter",
-        destination: Social.twitter.href || "/",
+        source: SocialLinks.twitter.href,
+        destination: SocialLinks.twitter.href || "/",
         permanent: true,
       },
       {
-        source: "/tiktok",
-        destination: Social.tiktok.href || "/",
+        source: SocialLinks.tiktok.href,
+        destination: SocialLinks.tiktok.href || "/",
         permanent: true,
       },
       {
-        source: "/instagram",
-        destination: Social.instagram.href,
+        source: SocialLinks.instagram.href,
+        destination: SocialLinks.instagram.href || "/",
         permanent: true,
       },
       {
-        source: "/pinterest",
-        destination: Social.pinterest.href,
+        source: SocialLinks.pinterest.href,
+        destination: SocialLinks.pinterest.href || "/",
         permanent: true,
       },
       {
-        source: "/medium",
-        destination: Social.medium.href,
+        source: SocialLinks.medium.href,
+        destination: SocialLinks.medium.href || "/",
         permanent: true,
       },
       {
-        source: "/leetcode",
-        destination: Social.leetcode.href,
+        source: SocialLinks.leetcode.href,
+        destination: SocialLinks.leetcode.href,
         permanent: true,
       },
     ];
