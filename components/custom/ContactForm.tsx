@@ -98,10 +98,13 @@ export default function ContactForm() {
               name="name"
               render={({ field }) => (
                 <Field className={defaultStyle}>
-                  <FieldLabel className="flex shrink-0">name</FieldLabel>
+                  <FieldLabel className="flex font-mono shrink-0">
+                    name
+                  </FieldLabel>
                   <div className="w-full">
                     <div className="relative w-full">
                       <Input
+                        className="font-sans"
                         key="text-input-1"
                         aria-invalid={!!form.formState.errors.name}
                         placeholder="Enter your name"
@@ -125,11 +128,14 @@ export default function ContactForm() {
               name="secondname"
               render={({ field }) => (
                 <Field className={defaultStyle}>
-                  <FieldLabel className="flex shrink-0">last Name</FieldLabel>
+                  <FieldLabel className="flex font-mono shrink-0">
+                    last Name
+                  </FieldLabel>
 
                   <div className="w-full">
                     <div className="relative w-full">
                       <Input
+                        className="font-sans"
                         key="text-input-2"
                         aria-invalid={!!form.formState.errors.secondname}
                         placeholder="Enter your last name"
@@ -153,11 +159,14 @@ export default function ContactForm() {
               name="email"
               render={({ field }) => (
                 <Field className={defaultStyle}>
-                  <FieldLabel className="flex shrink-0">email</FieldLabel>
+                  <FieldLabel className="flex font-mono shrink-0">
+                    email
+                  </FieldLabel>
 
                   <div className="w-full">
                     <div className="relative w-full">
                       <Input
+                        className="font-sans"
                         aria-invalid={!!form.formState.errors.email}
                         key="email-input-0"
                         placeholder="Enter your email"
@@ -182,10 +191,12 @@ export default function ContactForm() {
                 <Field className="col-span-12 col-start-auto flex self-end flex-col gap-2 space-y-0 items-start">
                   <div className="flex justify-between w-full">
                     <div>
-                      <FieldLabel className="flex shrink-0">message</FieldLabel>
+                      <FieldLabel className="flex font-mono shrink-0">
+                        message
+                      </FieldLabel>
                     </div>
                     <div>
-                      <FieldLabel className="flex shrink-0 tabular-nums">
+                      <FieldLabel className="flex font-mono shrink-0 tabular-nums">
                         {currentValue.length} / {remaining}
                       </FieldLabel>
                     </div>
@@ -195,9 +206,10 @@ export default function ContactForm() {
                       key="textarea-0"
                       id="textarea-0"
                       placeholder="Write your message here..."
-                      className="resize-none"
+                      className="resize-none font-sans"
                       maxLength={maxLength}
                       minLength={1}
+                      aria-invalid={!!form.formState.errors.textarea}
                       disabled={!!form.formState.isSubmitting}
                       required
                       {...field}
@@ -214,7 +226,7 @@ export default function ContactForm() {
 
         <div className="flex justify-between gap-2 mt-4 w-full">
           <Button
-            className="flex-1 cursor-pointer"
+            className="flex-1 font-mono cursor-pointer"
             variant="default"
             disabled={!!form.formState.isSubmitting}
             type="button"
@@ -225,7 +237,7 @@ export default function ContactForm() {
           </Button>
 
           <Button
-            className="flex-1 cursor-pointer "
+            className="flex-1 font-mono  cursor-pointer "
             variant="outline"
             type="submit"
             onClick={form.handleSubmit(onSubmit)}

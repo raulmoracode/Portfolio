@@ -13,7 +13,7 @@ export default function TagBadge({ tags = [] }: { tags?: readonly string[] }) {
             <Badge
               key={tag}
               className={cn(
-                "text-xs px-2 py-1 rounded-sm ",
+                "text-xs px-2 py-1 rounded-sm font-sans ",
                 colorScheme.background.badge,
                 "text-zinc-800 dark:text-zinc-300",
               )}

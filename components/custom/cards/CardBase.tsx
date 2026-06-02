@@ -11,12 +11,16 @@ export default function CardBase({
   return (
     <Card className="border-zinc-700 dark:border-zinc-800 bg-transparent hover:bg-[#ececec] dark:hover:bg-zinc-900 transition-colors">
       <CardHeader className="space-y-2">
-        <div className={cardHeaderStyle || "flex items-start justify-between"}>
+        <div
+          className={
+            cardHeaderStyle || "flex items-start justify-between font-sans"
+          }
+        >
           {cardHeader}
         </div>
       </CardHeader>
 
-      <CardContent className="wrap-break-word space-y-4">
+      <CardContent className="wrap-break-word space-y-4 font-mono">
         {cardContent}
       </CardContent>
     </Card>

@@ -29,7 +29,7 @@ export default function PageBase({
             <button
               type="button"
               onClick={() => router.back()}
-              className="text-xl w-fit cursor-pointer text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+              className="text-xl w-fit cursor-pointer text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors font-mono font-medium"
             >
               /back
             </button>
@@ -37,7 +37,7 @@ export default function PageBase({
           {children}
         </section>
       </main>
-      <footer className="w-full max-w-4xl px-8 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-md text-zinc-400">
+      <footer className="w-full max-w-4xl px-8 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2  text-zinc-400 font-mono font-medium">
         <span>© {new Date().getFullYear()} raulmoracode</span>
         <a
           href="mailto:contact@raulmoracode.com"
