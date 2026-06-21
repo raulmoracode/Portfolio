@@ -4,6 +4,7 @@ import { ModeToggle } from "@/components/theme/ButtonTheme";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import type { PageBaseProps } from "@/types/card";
+import Link from "next/link";
 
 export default function PageBase({
   title,
@@ -38,13 +39,13 @@ export default function PageBase({
         </section>
       </main>
       <footer className="w-full max-w-4xl px-8 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2  text-zinc-400 font-mono font-medium">
-        <span>© {new Date().getFullYear()} raulmoracode</span>
-        <a
-          href="mailto:contact@raulmoracode.com"
+        <Link
+          href="/contact"
           className="hover:text-black dark:hover:text-white transition-colors"
         >
-          contact@raulmoracode.com
-        </a>
+          mail me
+        </Link>
+        <span>©{new Date().getFullYear()} raulmoracode</span>
       </footer>
     </div>
   );

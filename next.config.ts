@@ -3,7 +3,6 @@ import { SocialLinks } from "./const/config/social-links";
 import { SocialRoutes } from "./const/config/social-routes";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["192.168.1.43"],
   async redirects() {
     return [
       {

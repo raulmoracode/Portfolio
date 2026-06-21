@@ -1,5 +1,5 @@
 export const buttonStyle =
-  "text-zinc-800 flex dark:text-zinc-400 hover:underline  items-center gap-1 text-xs w-fit transition-colors  ";
+  "text-zinc-800 flex dark:text-zinc-400 hover:underline items-center gap-1 text-xs w-fit transition-colors";
 
 export const iconSize = "h-3.5 w-3.5";
 

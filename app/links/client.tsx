@@ -19,7 +19,7 @@ export default function LinksClient() {
           <Link
             key={`${link.href}-${link.href}`}
             href={link.href}
-            className="text-zinc-400  cursor-pointer text-2xl hover:text-white transition-colors w-fit"
+            className="text-zinc-400  cursor-pointer text-2xl hover:text-black dark:hover:text-white transition-colors w-fit"
             target={
               SocialRoutesConverter.some((item) => item.href === link.href)
                 ? "_blank"
