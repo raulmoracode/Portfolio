@@ -1,7 +1,6 @@
 export const Info = {
   Home: {
-    description:
-      "I'm Raúl, a software development student building innovative digital experiences. I create, share, and grow through content, real projects, and community—where technology, creativity, and fashion come together as part of who i am.",
+    description: "Discover where tech, creativity, and fashion meet.",
     title: "Home",
   },
   Blog: {
@@ -13,8 +12,7 @@ export const Info = {
     title: "Events",
   },
   Contact: {
-    description:
-      "If you want to get in touch, ask questions, or just say hi, feel free to reach out!",
+    description: "Choose the email that best fits your message.",
     title: "Contact",
   },
   Links: {
@@ -22,11 +20,11 @@ export const Info = {
     title: "Links",
   },
   Projects: {
-    description: "Explore my projects and see what I've been working on.",
+    description: "Explore what I've been working on.",
     title: "Projects",
   },
   Experience: {
-    description: "Discover my professional journey and work experience.",
+    description: "Follow my professional journey.",
     title: "Experience",
   },
-};
+} as const;

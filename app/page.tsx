@@ -32,7 +32,7 @@ export default function Home() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-zinc-500 font-medium font-mono cursor-pointer hover:text-black dark:hover:text-white transition-colors w-fit"
+                className="text-dim font-medium font-mono cursor-pointer hover:text-hover transition-colors w-fit"
               >
                 <Label className="cursor-pointer text-xl leading-snug">
                   {link.href}
@@ -42,20 +42,20 @@ export default function Home() {
           </div>
 
           <Collapsible className="w-fit">
-            <CollapsibleTrigger className="group flex items-center gap-1.5 cursor-pointer select-none text-zinc-500 hover:text-black dark:hover:text-white transition-colors font-mono font-medium">
+            <CollapsibleTrigger className="group flex items-center gap-1.5 cursor-pointer select-none text-dim hover:text-hover transition-colors font-mono font-medium">
               social ({SocialRoutesConverter.length})
               <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:-rotate-45" />
             </CollapsibleTrigger>
 
             <CollapsibleContent>
-              <div className="mt-2 pl-3 border-l border-zinc-200 dark:border-zinc-800 flex flex-col space-y-2">
+              <div className="mt-2 pl-3 border-l border-border-subtle flex flex-col space-y-2">
                 {SortedSocialItems.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zinc-500 hover:text-black dark:hover:text-white transition-colors w-fit"
+                    className="text-dim hover:text-hover transition-colors w-fit"
                   >
                     <Label className="cursor-pointer font-mono leading-snug">
                       {link.label}

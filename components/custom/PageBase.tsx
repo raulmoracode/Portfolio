@@ -20,17 +20,17 @@ export default function PageBase({
       {showThemeToggle && <ModeToggle />}
       <main className="flex w-full max-w-4xl flex-col md:pt-25 sm:pt-40 sm:pb-1 pt-20 px-8 flex-1">
         <section className="space-y-4 mb-6 sm:mb-10">
-          <h1 className="text-4xl  tracking-tighter font-mono font-bold">
+          <h1 className="text-4xl tracking-tighter font-mono font-bold text-main">
             {title}
           </h1>
-          <p className="max-w-150 mb-4 font-mono  leading-snug text-zinc-500  text-lg ">
+          <p className="max-w-150 mb-4 font-mono leading-snug text-dim text-lg">
             {description}
           </p>
           {!isRootPath && (
             <button
               type="button"
               onClick={() => router.back()}
-              className="text-xl w-fit cursor-pointer text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors font-mono font-medium"
+              className="text-xl w-fit cursor-pointer text-dim hover:text-hover transition-colors font-mono font-medium"
             >
               /back
             </button>
@@ -38,14 +38,11 @@ export default function PageBase({
           {children}
         </section>
       </main>
-      <footer className="w-full max-w-4xl px-8 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2  text-zinc-400 font-mono font-medium">
-        <Link
-          href="/contact"
-          className="hover:text-black dark:hover:text-white transition-colors"
-        >
+      <footer className="w-full max-w-4xl px-8 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-faint font-mono font-medium">
+        <Link href="/contact" className="hover:text-hover transition-colors">
           mail me
         </Link>
-        <span>©{new Date().getFullYear()} raulmoracode</span>
+        <span>© {new Date().getFullYear()} raulmoracode</span>
       </footer>
     </div>
   );

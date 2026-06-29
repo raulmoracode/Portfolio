@@ -15,7 +15,7 @@ export default function NotFound() {
     >
       <Link
         href="/"
-        className="text-xl grid w-fit cursor-pointer text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+        className="text-xl grid w-fit cursor-pointer text-faint hover:text-hover transition-colors"
       >
         /
       </Link>

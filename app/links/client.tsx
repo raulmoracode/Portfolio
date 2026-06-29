@@ -14,12 +14,12 @@ export default function LinksClient() {
       description={Info.Links.description}
       showThemeToggle={true}
     >
-      <div className="border-zinc-200  dark:border-zinc-800 flex flex-col space-y-2 ">
+      <div className="flex flex-col space-y-2">
         {SortedAllItems.map((link) => (
           <Link
             key={`${link.href}-${link.href}`}
             href={link.href}
-            className="text-zinc-400  cursor-pointer text-2xl hover:text-black dark:hover:text-white transition-colors w-fit"
+            className="text-faint cursor-pointer text-2xl hover:text-hover transition-colors w-fit"
             target={
               SocialRoutesConverter.some((item) => item.href === link.href)
                 ? "_blank"

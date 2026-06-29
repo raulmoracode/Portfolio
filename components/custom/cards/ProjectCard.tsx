@@ -42,7 +42,7 @@ export default function ProjectCard({
       }
       cardContent={
         <>
-          <p className={cn("text-sm", colorScheme.text.primary)}>
+          <p className={cn("text-sm text-sub")}>
             {description}
           </p>
 
