@@ -82,7 +82,7 @@ export default function CareerCard({
 
           {highlights.length > 0 && (
             <ul className={cn("space-y-0.5 text-sm", colorScheme.text.primary)}>
-              {highlights.slice(0, 3).map((item) => (
+              {highlights.slice(0, 8).map((item) => (
                 <li key={item} className="flex gap-2">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-500 dark:bg-zinc-400" />
                   <span>{item}</span>

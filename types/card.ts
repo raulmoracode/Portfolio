@@ -53,4 +53,5 @@ export type PageBaseProps = {
   description: string;
   children?: ReactNode;
   showThemeToggle?: boolean;
+  isEmpty?: boolean;
 };

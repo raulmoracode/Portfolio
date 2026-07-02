@@ -20,4 +20,7 @@ export const MainRoutes = {
   Experience: {
     href: "/experience",
   },
+  Community: {
+    href: "/community",
+  },
 };

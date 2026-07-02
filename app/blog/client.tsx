@@ -4,7 +4,6 @@ import PageBase from "@/components/custom/PageBase";
 import { Info } from "@/const/page/info";
 import BlogCard from "@/components/custom/cards/BlogCard";
 import { articles } from "@/const/page/blogs";
-import ComingSoon from "@/components/custom/ComingSoon";
 
 export default function BlogClient() {
   return (
@@ -12,25 +11,22 @@ export default function BlogClient() {
       title={Info.Blog.title}
       description={Info.Blog.description}
       showThemeToggle={true}
+      isEmpty={articles.length === 0}
     >
-      {articles.length === 0 ? (
-        <ComingSoon />
-      ) : (
-        <div className="space-y-4">
-          {articles.map((article) => (
-            <BlogCard
-              key={article.url}
-              title={article.title}
-              description={article.description}
-              date={article.date}
-              url={article.url}
-              author={article.author}
-              readingTime={article.readingTime}
-              tags={article.tags}
-            />
-          ))}
-        </div>
-      )}
+      <div className="space-y-4">
+        {articles.map((article) => (
+          <BlogCard
+            key={article.url}
+            title={article.title}
+            description={article.description}
+            date={article.date}
+            url={article.url}
+            author={article.author}
+            readingTime={article.readingTime}
+            tags={article.tags}
+          />
+        ))}
+      </div>
     </PageBase>
   );
 }

@@ -5,16 +5,37 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import type { PageBaseProps } from "@/types/card";
 import Link from "next/link";
+import ComingSoon from "@/components/custom/ComingSoon";
+import { useEffect, useRef, useState } from "react";
 
 export default function PageBase({
   title,
   description,
   children,
   showThemeToggle = false,
+  isEmpty = false,
 }: PageBaseProps) {
   const pathname = usePathname();
-  const isRootPath = pathname === "/" || pathname === "/links";
   const router = useRouter();
+  const isRootPath = pathname === "/" || pathname === "/links";
+  const [prevPage, setPrevPage] = useState<string | null>(null);
+  const initialized = useRef(false);
+
+  useEffect(() => {
+    if (initialized.current) return;
+    initialized.current = true;
+    const stored = sessionStorage.getItem("__prev");
+    if (stored && stored !== pathname) {
+      setPrevPage(stored);
+    }
+  }, [pathname]);
+
+  useEffect(() => {
+    return () => {
+      sessionStorage.setItem("__prev", pathname);
+    };
+  }, [pathname]);
+
   return (
     <div className="flex min-h-screen flex-col items-center font-sans">
       {showThemeToggle && <ModeToggle />}
@@ -29,13 +50,13 @@ export default function PageBase({
           {!isRootPath && (
             <button
               type="button"
-              onClick={() => router.back()}
+              onClick={() => router.push(prevPage || "/")}
               className="text-xl w-fit cursor-pointer text-dim hover:text-hover transition-colors font-mono font-medium"
             >
               /back
             </button>
           )}
-          {children}
+          {isEmpty ? <ComingSoon /> : children}
         </section>
       </main>
       <footer className="w-full max-w-4xl px-8 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-faint font-mono font-medium">

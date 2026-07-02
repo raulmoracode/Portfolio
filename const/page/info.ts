@@ -27,4 +27,8 @@ export const Info = {
     description: "Follow my professional journey.",
     title: "Experience",
   },
+  Community: {
+    title: "Community",
+    description: "Connect with other developers and tech enthusiasts.",
+  },
 } as const;
