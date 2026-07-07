@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Geist";
-  src: url("https://cdn.raulmoracode.com/fonts/Geist/Geist-Regular.woff2")
+  src: url("https://cdn.raulmoracode.com/fonts/Geist-Sans/normal/Geist-Regular.woff2")
     format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("https://cdn.raulmoracode.com/fonts/Geist-Mono/GeistMono-Regular.woff2")
+  src: url("https://cdn.raulmoracode.com/fonts/Geist-Mono/normal/GeistMono-Regular.woff2")
     format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("https://cdn.raulmoracode.com/fonts/Geist-Mono/GeistMono-Medium.woff2")
+  src: url("https://cdn.raulmoracode.com/fonts/Geist-Mono/normal/GeistMono-Medium.woff2")
     format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("https://cdn.raulmoracode.com/fonts/Geist-Mono/GeistMono-Bold.woff2")
+  src: url("https://cdn.raulmoracode.com/fonts/Geist-Mono/normal/GeistMono-Bold.woff2")
     format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -75,7 +75,9 @@
   --color-card: var(--card);
   --color-main: var(--clr-main);
   --color-sub: var(--clr-sub);
+  --color-dim-plus: var(--clr-dim-plus);
   --color-dim: var(--clr-dim);
+  --color-dim-tag: var(--clr-dim-tag);
   --color-faint: var(--clr-faint);
   --color-hover: var(--clr-hover);
   --color-border-subtle: var(--clr-border-subtle);
@@ -129,6 +131,8 @@
   --clr-main: oklch(0.145 0 0);
   --clr-sub: oklch(0.27 0 0);
   --clr-dim: oklch(0.556 0 0);
+  --clr-dim-plus: oklch(0.3 0 0);
+  --clr-dim-tag: oklch(0.2 0 0);
   --clr-faint: oklch(0.645 0 0);
   --clr-hover: oklch(0 0 0);
   --clr-border-subtle: oklch(0.922 0 0);
@@ -172,6 +176,8 @@
   --clr-main: oklch(0.985 0 0);
   --clr-sub: oklch(0.708 0 0);
   --clr-dim: oklch(0.556 0 0);
+  --clr-dim-plus: oklch(0.8 0 0);
+  --clr-dim-tag: oklch(0.9 0 0);
   --clr-faint: oklch(0.556 0 0);
   --clr-hover: oklch(1 0 0);
   --clr-border-subtle: oklch(1 0 0 / 10%);

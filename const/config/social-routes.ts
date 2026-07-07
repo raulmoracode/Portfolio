@@ -35,4 +35,8 @@ export const SocialRoutes = {
     name: "Medium",
     href: "/medium",
   },
+  reddit: {
+    name: "Reddit",
+    href: "/reddit",
+  },
 };

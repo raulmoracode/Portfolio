@@ -50,6 +50,11 @@ const nextConfig: NextConfig = {
         destination: SocialLinks.leetcode.href || "/",
         permanent: true,
       },
+      {
+        source: SocialRoutes.reddit.href,
+        destination: SocialLinks.reddit.href || "/",
+        permanent: true,
+      },
     ];
   },
 };

@@ -17,10 +17,12 @@ export const SocialRoutesConverter = Object.entries(SocialRoutes).map(
 
 export const SortedSocialItems = SocialRoutesConverter.sort(byHrefLength);
 
-export const SortedMainItems = Object.values(MainRoutes).filter(
-  (link) =>
-    link.href !== MainRoutes.Links.href && link.href !== MainRoutes.Home.href,
-).sort(byHrefLength);
+export const SortedMainItems = Object.values(MainRoutes)
+  .filter(
+    (link) =>
+      link.href !== MainRoutes.Links.href && link.href !== MainRoutes.Home.href,
+  )
+  .sort(byHrefLength);
 
 export const SortedAllItems = [
   ...Object.values(MainRoutes).filter(

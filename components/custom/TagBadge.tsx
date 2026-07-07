@@ -13,7 +13,7 @@ export default function TagBadge({ tags = [] }: { tags?: readonly string[] }) {
               className={cn(
                 "text-xs px-2 py-1 rounded-sm font-sans",
                 colorScheme.background.badge,
-                "text-sub",
+                "text-dim-tag",
               )}
             >
               {tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase()}

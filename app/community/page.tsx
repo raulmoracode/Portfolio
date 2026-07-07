@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ContactClient from "./client";
+import CommunityClient from "./client";
 import { Info } from "@/const/page/info";
 
 export const metadata: Metadata = {
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function CommunityPage() {
-  return <ContactClient />;
+  return <CommunityClient />;
 }

@@ -32,7 +32,11 @@ export default function PageBase({
 
   useEffect(() => {
     return () => {
-      sessionStorage.setItem("__prev", pathname);
+      const isBackNav = sessionStorage.getItem("__is_back_nav") === "true";
+      sessionStorage.removeItem("__is_back_nav");
+      if (!isBackNav) {
+        sessionStorage.setItem("__prev", pathname);
+      }
     };
   }, [pathname]);
 
@@ -50,8 +54,15 @@ export default function PageBase({
           {!isRootPath && (
             <button
               type="button"
-              onClick={() => router.push(prevPage || "/")}
-              className="text-xl w-fit cursor-pointer text-dim hover:text-hover transition-colors font-mono font-medium"
+              onClick={() => {
+                if (prevPage) {
+                  sessionStorage.setItem("__is_back_nav", "true");
+                  router.back();
+                } else {
+                  router.push("/");
+                }
+              }}
+              className="text-xl w-fit cursor-pointer text-dim-plus hover:text-hover transition-colors font-mono font-medium"
             >
               /back
             </button>

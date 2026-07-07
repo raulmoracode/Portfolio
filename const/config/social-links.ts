@@ -35,4 +35,8 @@ export const SocialLinks = {
     name: "LeetCode",
     href: "https://leetcode.com/u/raulmoracode/",
   },
+  reddit: {
+    name: "Reddit",
+    href: "https://www.reddit.com/user/raulmoracode",
+  },
 };

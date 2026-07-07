@@ -14,7 +14,13 @@ export default function CommunityClient() {
       isEmpty={Object.keys(CommunityList).length === 0}
     >
       <div className="flex flex-col space-y-5">
-        {(Object.values(CommunityList) as { href: string; title: string; description: string }[]).map((link) => (
+        {(
+          Object.values(CommunityList) as {
+            href: string;
+            title: string;
+            description: string;
+          }[]
+        ).map((link) => (
           <Link
             key={link.href}
             href={link.href}
