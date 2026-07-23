@@ -28,7 +28,7 @@ export default function ProjectCard({
     <CardBase
       cardHeader={
         <>
-          <h3 className="text-base font-medium tracking-tight">{title}</h3>
+          <h3 className="text-base font-sans tracking-tight">{title}</h3>
 
           <div className="flex items-center gap-5">
             {status && (
@@ -42,9 +42,7 @@ export default function ProjectCard({
       }
       cardContent={
         <>
-          <p className={cn("text-sm text-sub")}>
-            {description}
-          </p>
+          <p className={cn("text-sm text-sub")}>{description}</p>
 
           <TagBadge tags={tags} />
 

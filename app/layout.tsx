@@ -4,7 +4,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "raulmoracode",
+  description:
+    "Discover where tech, creativity, and fashion meet. Explore my projects, experience, community, and creative work.",
   icons: {
     icon: "https://cdn.raulmoracode.com/icons/favicon.ico",
     shortcut: "https://cdn.raulmoracode.com/icons/favicon.ico",
