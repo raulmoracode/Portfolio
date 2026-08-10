@@ -31,4 +31,8 @@ export const Info = {
     title: "Community",
     description: "Connect with other developers and tech enthusiasts.",
   },
+  Tagger: {
+    title: "Tagger",
+    description: "So you scan my NFC weareable badge, right?",
+  },
 } as const;

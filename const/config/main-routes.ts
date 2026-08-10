@@ -23,4 +23,7 @@ export const MainRoutes = {
   Community: {
     href: "/community",
   },
+  Tagger: {
+    href: "/tagger",
+  },
 };

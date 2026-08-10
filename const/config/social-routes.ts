@@ -39,4 +39,8 @@ export const SocialRoutes = {
     name: "Reddit",
     href: "/reddit",
   },
+  Tagger: {
+    name: "Tagger",
+    href: "/tagger",
+  },
 };

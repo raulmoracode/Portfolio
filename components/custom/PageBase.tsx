@@ -17,7 +17,8 @@ export default function PageBase({
 }: PageBaseProps) {
   const pathname = usePathname();
   const router = useRouter();
-  const isRootPath = pathname === "/" || pathname === "/links";
+  const isRootPath =
+    pathname === "/" || pathname === "/links" || pathname === "/badge";
   const [prevPage, setPrevPage] = useState<string | null>(null);
   const initialized = useRef(false);
 

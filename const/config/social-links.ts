@@ -39,4 +39,8 @@ export const SocialLinks = {
     name: "Reddit",
     href: "https://www.reddit.com/user/raulmoracode",
   },
+  Tagger: {
+    name: "Tagger",
+    href: "https://tagger.raulmoracode.com",
+  },
 };

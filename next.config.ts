@@ -55,6 +55,11 @@ const nextConfig: NextConfig = {
         destination: SocialLinks.reddit.href || "/",
         permanent: true,
       },
+      {
+        source: SocialRoutes.Tagger.href,
+        destination: SocialLinks.Tagger.href || "/",
+        permanent: true,
+      },
     ];
   },
 };
